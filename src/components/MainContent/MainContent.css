@@ -1,0 +1,88 @@
+.main-container {
+    /* position: relative; */
+    background: linear-gradient(to top right, white, #fd5fa9);
+    padding: 13px 20px;
+    /* min-height: 80vh; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    font-family: sans-serif;
+    margin: 51px;
+    border-radius: 32px;
+    margin-top: 85px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen a la izquierda */
+  .image-container {
+    position: absolute;
+    right: 20%;
+    top: 38%;
+    transform: translateY(-50%);
+    width: 437px;
+    height: 397px;
+    border-radius: 32px;
+    overflow: hidden;
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Contenido principal */
+  .content {
+    max-width: 549px;
+    text-align: center;
+    /* z-index: 1; */
+    padding: 0 40px;
+    margin-left: 11%;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 32px;
+  }
+  
+  .main-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .main-button:hover {
+    background-color: #e055a1;
+  }
+  
+  /* Redes sociales */
+  .social-icons {
+    margin-top: 32px;
+    font-size: 1.5rem;
+  }
+  
+  .social-icons a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff69b4;
+  }
+  
