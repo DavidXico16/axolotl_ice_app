@@ -1,7 +1,7 @@
 import "./Navbar.css"
 import icon from '../../assets/imagenes/icon_axolotl.jpg'
 import { useState } from "react";
-import { FaAlignJustify } from 'react-icons/fa';
+import { FaAlignJustify, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import menuPdf from '../../assets/menu/menu_axolotl.pdf'
 
@@ -12,12 +12,8 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(prev => !prev);
 
   const handleDownload = () => {
-    // Ruta relativa al archivo PDF en la carpeta 'public'
     const pdfUrl = menuPdf;
-    // Nombre que tendrá el archivo al descargarse
     const fileName = "Menu-Axalotl-Ice.pdf";
-    
-    // Crear un enlace temporal para la descarga
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = fileName;
@@ -26,42 +22,52 @@ const Navbar = () => {
     document.body.removeChild(link);
   };
 
+
+  const phoneNumber = '525521320331'; // Reemplaza con tu número (incluye código país)
+  const defaultMessage = 'Hola, vi tu heladería Axalotl Ice y me interesa saber más...';
+  const handleClickWhatApp = () => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+    window.open(url, '_blank');
+  };
+  
+
   return (
       <div className="navbar">
         <div className="navbar__icon">
-          <img src={icon} className="icon_navbar" 
-          alt="Helado decorativo"  />
+          <img src={icon} className="icon_navbar" alt="Axolotl decorativo"/>
         </div>
   
-        
         <div className="navbar__links">
 
           <Link to="/" style={{ marginRight: '1rem' }}>
-            <button className="select_menu" >
+            <button className="select_menu" autoFocus >
                 Inicio
             </button>
           </Link>
 
           <Link to="/quienesSomos" style={{ marginRight: '1rem' }}>
             <button className="select_menu" >
-                Quieren Somos
+                Quienes Somos
             </button>
           </Link>
+
           <Link to="/conocenos" style={{ marginRight: '1rem' }}>
             <button className="select_menu" >
                 Conócenos
             </button>
           </Link>
-          <a href="#">
-            <button className="select_menu" onClick={handleDownload} >
-                    Menu
-            </button>
-          </a>
+          
+          <button className="select_menu" onClick={handleDownload} >
+                  Menu
+          </button>
+      
 
         </div>
   
         <div className="navbar__button">
-          <button>Contacto</button>
+          <button onClick={handleClickWhatApp}>
+          Contacto <FaWhatsapp className="text-2xl hover:scale-110 transition"  />
+          </button>
         </div>
 
         <div className="menu_button">
@@ -70,10 +76,26 @@ const Navbar = () => {
           </button>
           {isOpen && (
             <div className="menu">
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                <li><a href="#">Opción 1</a></li>
-                <li><a href="#">Opción 2</a></li>
-                <li><a href="#">Opción 3</a></li>
+              <ul className="fullscreen-menu" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li>
+                  <Link onClick={toggleMenu} to="/" >Inicio</Link> 
+                </li>
+                <li>
+                  <Link onClick={toggleMenu}  to="/quienesSomos" >Quienes Somos</Link> 
+                </li>
+                <li>
+                  <Link onClick={toggleMenu} to="/conocenos" >Conócenos</Link> 
+                </li>
+                <li>
+                  <a onClick={toggleMenu} >
+                    Menu
+                  </a>
+                </li>
+                <li>
+                  <a onClick={handleClickWhatApp} >
+                    Contacto
+                  </a>
+                </li>
               </ul>
             </div>
           )}

@@ -7,14 +7,13 @@
   background-image: url('/src/assets/imagenes/fondo.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Altura completa de la pantalla */
+  /*height: 100vh;  Altura completa de la pantalla */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white; /* Color del texto para contrastar */
   text-align: center;
-  padding: 20px;
 }
 
 /*

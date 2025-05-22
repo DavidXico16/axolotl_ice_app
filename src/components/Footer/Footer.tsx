@@ -7,11 +7,6 @@ const Footer = () => {
   
     return (
     <footer className="footer">
-      <div className="footer__nav">
-        <a href="#">Inicio</a>
-        <a href="#">Sabores y Productos</a>
-        <a href="#">Contacto</a>
-      </div>
 
       <div className="footer__icons">
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
