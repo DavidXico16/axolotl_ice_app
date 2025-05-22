@@ -1,9 +1,20 @@
 #root {
-  padding-top: 0.5rem;
+  /*padding-top: 0.5rem;*/
   background-color: #f5e1e5;
   /*max-width: 1280px;
   margin: 0 auto;
   text-align: center;*/
+  background-image: url('/src/assets/imagenes/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Altura completa de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Color del texto para contrastar */
+  text-align: center;
+  padding: 20px;
 }
 
 /*
@@ -51,3 +62,17 @@
   color: #777;
   font-size: 0.9rem;
 }*/
+
+.fondo {
+  background-image: url('ruta-de-tu-imagen-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Altura completa de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Color del texto para contrastar */
+  text-align: center;
+  padding: 20px;
+}

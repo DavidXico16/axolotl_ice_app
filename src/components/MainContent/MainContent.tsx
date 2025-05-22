@@ -1,6 +1,5 @@
 import "./MainContent.css"
 import logo from '../../assets/imagenes/l.png'
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const MainContent = () => {
     return (
@@ -13,20 +12,10 @@ const MainContent = () => {
             <div className="content-text">
               <h1>¡Bienvenidos a tu Heladería Axalotl Ice!</h1>
               <p className="subtitle">
-                Descubre una explosión de sabores y la calidad que nos
-                distingue. ¡Tu experiencia deliciosa comienza aquí!
+                En <b>Axalotl Ice</b>, creamos helados y paletas artesanales con ingredientes frescos y naturales. 
+                Cada bocado es una aventura llena de sabor y creatividad. ¡Ven y disfruta de lo mejor!
               </p>
               <button className="main-button">Explora nuestros sabores</button>
-      
-              {/* Redes sociales */}
-              <div className="social-icons">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="text-2xl hover:scale-110 transition" />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook className="text-2xl hover:scale-110 transition" />
-                </a>
-              </div>
             </div>
             
 
