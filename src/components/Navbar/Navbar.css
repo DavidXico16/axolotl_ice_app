@@ -200,3 +200,7 @@
 .fullscreen-menu a:hover {
   color: #FF6B6B; /* Color al hover (ej: rosa pastel) */
 }
+
+.icon-whatapp{
+  margin-bottom: -2px !important;
+}

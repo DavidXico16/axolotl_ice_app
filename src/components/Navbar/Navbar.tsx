@@ -66,7 +66,7 @@ const Navbar = () => {
   
         <div className="navbar__button">
           <button onClick={handleClickWhatApp}>
-          Contacto <FaWhatsapp className="text-2xl hover:scale-110 transition"  />
+          Contacto <FaWhatsapp className="text-2xl hover:scale-110 transition icon-whatapp"  />
           </button>
         </div>
 
